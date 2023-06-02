@@ -1,0 +1,186 @@
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#hover {
+    margin position: relative;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    background: #111;
+    color: #efefef;
+}
+
+.dumbo {
+    width: 100%;
+    max-width: 105px;
+    height: auto;
+    top: 15px;
+    left: 15px;
+    z-index: 0;
+    position: fixed;
+}
+
+.card {
+    width: 360px;
+    height: 400px;
+    top: 150px;
+    margin-left: 100px;
+    align-self: center;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card:hover .keyvisual {
+    transform: translate(0, 0%) translateZ(0);
+}
+
+.keyvisual {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    background: transparent;
+    background-color: white;
+    background-position: center;
+    transform: translate(0, 79.5%) translateZ(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.content {
+    position: relative;
+    background: #484848;
+    height: 50%;
+    width: 100%;
+}
+
+.content::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 110%;
+    height: 100%;
+    left: -5%;
+    top: -10%;
+    transform: rotate(6.5deg) translateZ(0);
+    background: #484848;
+    z-index: 0;
+}
+
+.content>div {
+    position: relative;
+    z-index: 1;
+}
+
+.content>div.title {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 0);
+    font-size: 40px;
+    line-height: 1;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.img-hover-text {
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+
+.img-hover-text img {
+    width: 100%;
+    transition: .5s;
+}
+
+.img-hover-text figcaption {
+    position: absolute;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.671);
+    bottom: 10%;
+    left: 10%;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.img-hover-text:hover figcaption {
+    opacity: 1;
+}
+
+.img-hover-text:hover img {
+    /* darkens the image */
+    filter: brightness(70%);
+}
+
+.btn {
+    cursor: pointer;
+    position: relative;
+    left: -260px;
+    top: 200px;
+    padding: 10px 20px;
+    background: #D3D3D3;
+    color: black;
+    font-size: 28px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all 1s;
+}
+
+.btn:after,
+.btn:before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border: 0px solid #fff;
+    transition: all 1s;
+}
+
+.btn:after {
+    top: -1px;
+    left: -1px;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+}
+
+.btn:before {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+}
+
+.btn:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.btn:hover:before,
+.btn:hover:after {
+    width: 100%;
+    height: 100%;
+}

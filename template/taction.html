@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reccomendations</title>
+    <link rel="stylesheet" href="../static/style3.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="../static/star.mp4" type="video/mp4">
+    </video>
+    <img onclick="window.location.href = '/try1' " class="dumbo" src="../static/gola.png" alt="logo" align="left">
+    <div class="card">
+        <div class="keyvisual"><video autoplay muted loop id="hover">
+            <source src="../static/hover.mp4" type="video/mp4">
+        </video></div>
+        <div class="content">
+            <div class="title">
+                {{b[0]}}
+            </div>
+        </div>
+    </div>
+    <div>
+        <span onclick="window.location.href = 'taction' " class="btn">  REFRESH   </span>
+    </div>
+
+    <figure class="img-hover-text">
+
+        <img src="../static/fam.jpeg" alt="">
+
+        <figcaption>
+            <p>Cast : {{b[6]}},{{b[7]}},{{b[8]}},{{b[9]}}</p>
+            <p>Runtime : {{b[1]}}</p>
+            <p>IMDb ratings : {{b[4]}}</p>
+            <p>Certificate : {{b[2]}}</p>
+            <p>Genre : {{b[3]}}</p>
+        </figcaption>
+
+    </figure>
+
+</body>
+
+</html>

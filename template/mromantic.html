@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reccomendations</title>
+    <link rel="stylesheet" href="../static/style3.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="../static/star.mp4" type="video/mp4">
+    </video>
+    <img onclick="window.location.href = '/try' " class="dumbo" src="../static/gola.png" alt="logo" align="left">
+    <div class="card">
+        <div class="keyvisual"><video autoplay muted loop id="hover">
+            <source src="../static/hover.mp4" type="video/mp4">
+        </video></div>
+        <div class="content">
+            <div class="title">
+                {{a[0]}}
+            </div>
+        </div>
+    </div>
+    <div>
+        <span onclick="window.location.href = 'mromantic' " class="btn">REFRESH </span>
+    </div>
+
+    <figure class="img-hover-text">
+
+        <img src="../static/fam.jpeg" alt="">
+
+        <figcaption>
+            <p>Cast : {{a[5]}}</p>
+            <p>Duration : {{a[3]}}</p>
+            <p>IMDb ratings : {{a[7]}}</p>
+            <p>Language : {{a[4]}}</p>
+            <p>Genre : {{a[2]}}</p>
+            <p>Year of Release : {{a[1]}}</p>
+            <p>Description : {{a[6]}}</p>
+        </figcaption>
+
+    </figure>
+
+</body>
+
+</html>
